@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/Anasauce/Little-Bytes#readme",
   "dependencies": {
-    "babel": "^6.23.0",
     "babel-preset-es2015": "^6.22.0",
     "babel-register": "^6.23.0",
     "body-parser": "^1.16.1",
