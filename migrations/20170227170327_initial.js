@@ -22,6 +22,11 @@ exports.up = function(knex, Promise) {
       table.timestamps()
     }),
 
+    knex.schema.createTable('guardians', table => {
+      table.integer('child_id')
+      table.integer('human_id')
+    }),
+
     knex.schema.createTable('events', table => {
       table.increments('id').primary()
       table.string('name', 100).notNullable()
