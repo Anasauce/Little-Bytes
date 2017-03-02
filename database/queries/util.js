@@ -1,10 +1,8 @@
-import knex from 'knex'
+import knex from '../index'
 
 const firstRecord = records => records[0]
 
 const createRecord = (table, attributes) => {
-  console.log('table!', table)
-  console.log('attributes!', attributes)
   return knex
     .table(table)
     .insert(attributes)

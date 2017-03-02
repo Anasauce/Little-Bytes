@@ -28,6 +28,7 @@ router.post( '/signup', ( request, response, next ) => {
       })
     })
     .catch( error => {
+      console.log( 'error', error )
       response.render(
         'auth/signup',
         { message: 'Oops! That email address is not available!' }
