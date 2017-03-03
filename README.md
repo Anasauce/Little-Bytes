@@ -11,6 +11,8 @@ Please notify us if you would like to pick up an issue oaklandtechforkids@gmail.
 
 - Setup environment for Node and install all dependencies. Run locally on port 2720.
 
+- When working on an issue refer to data model in WIREFRAME.md
+
 - Create database:
 
 ```
@@ -19,6 +21,14 @@ createdb lil_bytes_development
 
 - Migrations:
 
-```npm start``` command runs all latest migrations.
+```
+npm start
+``` 
+command runs all needed migrations.
+
+```
+knex migrate:make [name]
+``` 
+will generate new migration.
 
 This webiste is not currently in production. 
