@@ -4,8 +4,8 @@ block content
   if message
     div.error-message= message
 
-  h2.top-margin Sign up for Lil-Bytes!
-  form(method='post' action='/users/signup')
+  h2 Sign up for Lil-Bytes!
+  form(method='POST' action='/users/signup')
     .form
       label Email
       input(type='text', name='email')

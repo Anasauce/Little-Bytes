@@ -10,5 +10,19 @@ const createUser = attributes => {
     })
 }
 
+const findUserById = id =>
+  util.findRecord( 'users', 'id', id )
 
-export default { createUser }
+const findUserByEmail = ( email, password ) =>
+  util.findRecord( 'users', 'email', email )
+    .then( user => {
+      console.log('user in quiref!', user)
+      comparePassword( password, user )
+    })
+    .catch(error => console.log('error:', error))
+
+export {
+  createUser,
+  findUserById,
+  findUserByEmail
+}

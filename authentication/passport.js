@@ -1,26 +1,33 @@
-import passport from 'passport'
+const passport = require('passport')
 import { Strategy } from 'passport-local'
-import { findUser, findUserById } from '../database/queries/users'
+import { findUserByEmail, findUserById } from '../database/queries/users'
 
-const verify = ( email, password, next ) =>
-  findUser( email, password)
-    .then( user => next(null, user ? user : false ))
-    .catch(error => next( error ))
+const verify = ( email, password, done ) =>
+  findUserByEmail( email )
+    .then( user => {
+      console.log('user in AUTH!', user)
+
+      done(null, user ? user : false )
+    })
+    .catch( error => done( error ))
 
 
 const userNameField = 'email'
 const passwordField = 'password'
 
-passport.use(new Strategy( { userNameField, passwordField }, verify ))
+passport.serializeUser(( user, done ) => done( null, user.id ))
 
-passport.serializeUser(( user, next ) => next( null, user.id ))
-passport.deserializeUser(( id, next ) =>
+passport.deserializeUser(( id, done ) => {
   findUserById( id )
     .then( user => {
-      const { id, email } = user
-      next( null, { id, email })
+      done( null, user)
     })
-    .catch( error => next( error ))
-)
+    .catch( error => {
+      done( error )
+    })
+})
 
-export default passport
+
+passport.use(new Strategy( { userNameField, passwordField }, verify ))
+
+module.exports = passport

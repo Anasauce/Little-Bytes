@@ -1,33 +1,34 @@
 import knex from '../index'
 
-const firstRecord = records => records[0]
+export const firstRecord = records => records[0]
 
-const createRecord = (table, attributes) => {
+export const createRecord = (table, attributes) => {
   return knex
     .table(table)
     .insert(attributes)
     .returning('*')
+    .then(firstRecord)
 }
 
-const findRecord = (table, column, data) =>
+export const findRecord = (table, column, data) =>
   knex
     .table(table)
     .where(column, data)
     .returning('*')
     .then(firstRecord)
 
-const findAllWhere = (table, column, data) =>
+export const findAllWhere = (table, column, data) =>
   knex
     .table(table)
     .where(column, data)
     .returning('*')
 
-const findAll = table =>
+export const findAll = table =>
   knex
     .table(table)
     .returning('*')
 
-const updateRecord = (table, column, data, attributes) => {
+export const updateRecord = (table, column, data, attributes) => {
   attributes.updated_at = knex.raw('now()')
   return knex
     .table(table)
@@ -38,23 +39,11 @@ const updateRecord = (table, column, data, attributes) => {
   }
 
 
-const deleteRecord = (table, column, data) =>
+export const deleteRecord = (table, column, data) =>
   knex
     .table(table)
     .where(column, data)
     .del()
 
-const deleteAll = table =>
+export const deleteAll = table =>
   knex.raw(`DELETE FROM ${table}`)
-
-
- export {
-    createRecord,
-    deleteRecord,
-    findRecord,
-    firstRecord,
-    updateRecord,
-    findAllWhere,
-    findAll,
-    deleteAll
-}

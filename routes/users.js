@@ -1,5 +1,5 @@
 import express from 'express'
-import database from '../database/queries/users'
+import { createUser } from '../database/queries/users'
 import passport from '../authentication/passport'
 const router = express.Router()
 
@@ -21,14 +21,13 @@ router.get( '/signup', ( request, response) => {
 router.post( '/signup', ( request, response, next ) => {
   const { email, password } = request.body
 
-  database.createUser({ email, password })
+  createUser({ email, password })
     .then( user => {
       request.login({ id: user.id, email }, error => {
         error ? next( error ) : response.redirect( '/' )
       })
     })
     .catch( error => {
-      console.log( 'error', error )
       response.render(
         'auth/signup',
         { message: 'Oops! That email address is not available!' }
