@@ -1,5 +1,2 @@
-const isLoggedIn = ( request, response, next ) => {
+export const isLoggedIn = (request, response, next) =>
   request.user ? next() : response.redirect('/auth/login')
-}
-
-export { isLoggedIn }

@@ -1,7 +1,5 @@
 exports.up = function(knex, Promise) {
-
   return Promise.all([
-
     knex.schema.createTable('users', table => {
       table.increments('id').primary()
       table.string('email').notNullable().unique()
@@ -62,16 +60,13 @@ exports.up = function(knex, Promise) {
       table.timestamps()
     })
   ])
-
-};
+}
 
 exports.down = function(knex, Promise) {
-
   return Promise.all([
-        knex.schema.dropTable('users'),
-        knex.schema.dropTable('humans'),
-        knex.schema.dropTable('events'),
-        knex.schema.dropTable('event_attendees')
-    ])
-
-};
+    knex.schema.dropTable('users'),
+    knex.schema.dropTable('humans'),
+    knex.schema.dropTable('events'),
+    knex.schema.dropTable('event_attendees')
+  ])
+}
