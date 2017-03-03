@@ -9,7 +9,7 @@ We are a diverse group of tech professionals from Oakland providing free coding 
 
 Please notify us if you would like to pick up an issue oaklandtechforkids@gmail.com
 
-- Setup environment for Node and install all dependencies
+- Setup environment for Node and install all dependencies. Run locally on port 2720.
 
 - Create database:
 
@@ -20,3 +20,5 @@ createdb lil_bytes_development
 - Migrations:
 
 ```npm start``` command runs all latest migrations.
+
+This webiste is not currently in production. 
