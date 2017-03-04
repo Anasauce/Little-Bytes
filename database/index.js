@@ -1,7 +1,8 @@
-const config = require('../knexfile.js')
+import config from '../knexfile.js'
 const environment = 'development'
-const knex = require('knex')(config[environment])
+import Knex from 'knex'
 
-module.exports = knex
-
+const knex = Knex(config[environment])
 knex.migrate.latest([config])
+
+export default knex

@@ -1,9 +1,6 @@
-module.exports = {
-
+export default {
   development: {
     client: 'postgresql',
-    connection: {
-      database: 'lil_bytes_development'
-    }
+    connection: `postgres://${process.env.USER}@localhost:5432/lil_bytes_development`
   }
 }
