@@ -21,14 +21,8 @@ createdb lil_bytes_development
 
 - Migrations:
 
-```
-npm start
-``` 
-command runs all needed migrations.
+`npm start` command runs all needed migrations.
 
-```
-knex migrate:make [name]
-``` 
-will generate new migration.
+`knex migrate:make [name]` will generate new migration.
 
 This webiste is not currently in production. 
