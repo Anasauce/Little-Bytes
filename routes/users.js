@@ -1,5 +1,5 @@
 import express from 'express'
-import {createUser} from '../database/queries/users'
+import { createUser } from '../database/commands/users'
 import passport from '../authentication/passport'
 
 const router = express.Router()
