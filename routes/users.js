@@ -15,18 +15,18 @@ router.get('/login', (request, response) =>
 
 router.post(
   '/login',
-  passport.authenticate('local', AUTHREDIRECT),
-  (request, response) => response.redirect('/')
+  passport.authenticate( 'local', AUTHREDIRECT ),
+  ( request, response ) => response.redirect('/')
 )
 
-router.get('/signup', (request, response) =>
-  response.render('auth/signup')
+router.get('/signup', ( request, response ) =>
+  response.render( 'auth/signup' )
 )
 
-router.post('/signup', (request, response, next) => {
-  const {email, password} = request.body
+router.post('/signup', ( request, response, next ) => {
+  const { email, password } = request.body
 
-  createUser({email, password})
+  createUser({ email, password })
     .then(user =>
       request.login({id: user.id, email}, error =>
         error ? next(error) : response.redirect('/')
