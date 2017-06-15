@@ -35,7 +35,7 @@ We are a diverse group of tech professionals from Oakland providing free coding 
 
 ## Extra asks...
 
-- Would love to UI/UX professionals to crituque and add input to our site please reach out to us if you have an interest in helping with this and we will be adding design tickets to the issues/project board soon
+- Would love to UI/UX professionals to critique and add input to our site please reach out to us if you have an interest in helping with this and we will be adding design tickets to the issues/project board soon
 
 
 This webiste is not currently in production. 
