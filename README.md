@@ -20,8 +20,8 @@ We are a diverse group of tech professionals from Oakland providing free coding 
 
 ### Setup dev environment
 
-- if you don't have these already install Node, Express, Postgres
-- install all project dependencies using command `npm i` 
+- if you don't have these already install Node, Express and Postgres globally
+- install all current project-based dependencies using command `npm i` before starting development on new feature
 
 ### Setup database
 
@@ -31,11 +31,11 @@ We are a diverse group of tech professionals from Oakland providing free coding 
 
 ### Testing 
 
-- To run tests `npm run test` form the command line. 
+- To run tests `npm run test` from the command line. 
 
 ## Extra asks...
 
-- Would love to UI/UX professionals to critique and add input to our site please reach out to us if you have an interest in helping with this and we will be adding design tickets to the issues/project board soon
+- Would love to UI/UX professionals to critique and/or add input to our site please reach out to us if you have an interest in helping with this and we will be adding design tickets to the issues/project board soon
 
 
 This webiste is not currently in production. 
