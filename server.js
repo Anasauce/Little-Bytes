@@ -6,6 +6,8 @@ import bodyParser from 'body-parser'
 import passport from './authentication/passport'
 import users from './routes/users.js'
 import index from './routes/index.js'
+import admin from './routes/admin.js'
+
 
 const app = express()
 
@@ -21,5 +23,6 @@ app.use(passport.session())
 
 app.use('/', index)
 app.use('/users', users)
+app.use('/admin', admin)
 
 export default app

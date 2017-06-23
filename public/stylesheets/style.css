@@ -41,8 +41,8 @@ h2, h3, h4, h5, p {
 
 .navbar-right a {
   text-decoration: none;
-  color: black;
-  margin: 25px;
+  color: black !important;
+  margin: 25px !important;
 }
 
 .logo-header {
@@ -61,6 +61,18 @@ h2, h3, h4, h5, p {
   background-size: cover;
   width: 100%;
   height: 700px;
+  position: relative;
+  top: 29px;
+  text-align: center;
+}
+
+.section-one-learnmore {
+  background-image: url(http://i.imgur.com/dY9tKYS.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
   position: relative;
   top: 29px;
   text-align: center;
@@ -99,6 +111,19 @@ h2, h3, h4, h5, p {
 
 .section-two {
 
+}
+
+.big-floaty-box {
+  position: absolute;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.7);
+  width: 57%;
+  top: 40%;
+  margin: 0 21% 0 21%;
+}
+
+.learnmore-header {
+  font-size: 29px;
 }
 
 a.button:active {border-style: inset;}

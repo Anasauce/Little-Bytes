@@ -6,6 +6,10 @@ router.get('/', (request, response) =>
   response.render('landingpage')
 )
 
-export default router
+router.get('/learnmore', (request, response) => {
+  console.log('this is working')
+  response.render('learnmore')
+})
 
-// response.send(`SESSION: ${JSON.stringify(request.session, null, 2)}`)
+
+export default router
