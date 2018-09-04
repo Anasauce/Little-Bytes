@@ -10,7 +10,6 @@ We are a diverse group of tech professionals from Oakland providing free coding 
 - Node.js, Express
 - Postgres, Knex (SQL Builder)
 - Pug - HTML templating for the frontend
-- ***Future plans are to convert frontend to React...please reach out if you would like to help with webpack configuration and conversion of current frontend UI to React
 
 ## Contributing
 
@@ -32,10 +31,6 @@ We are a diverse group of tech professionals from Oakland providing free coding 
 ### Testing 
 
 - To run tests `npm run test` from the command line. 
-
-## Extra asks...
-
-- Would love to UI/UX professionals to critique and/or add input to our site please reach out to us if you have an interest in helping with this and we will be adding design tickets to the issues/project board soon
 
 
 This webiste is not currently in production. 
