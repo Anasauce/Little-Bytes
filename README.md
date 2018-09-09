@@ -24,7 +24,7 @@ We are a diverse group of tech professionals from Oakland providing free coding 
 
 ### Setup database
 
-- Create database: `createdb lil_bytes_developement` 
+- Create database: `createdb lil_bytes_development` 
 - `npm start` or `knex migrate:latest` commands runs all latest migrations.
 - `knex migrate:make [name]` will generate new migration.
 
